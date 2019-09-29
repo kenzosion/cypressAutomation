@@ -16,7 +16,11 @@ describe ('Writing cypress test', () => {
         // })
         cy.get('.-open.-with-sub-menu > .ef-nav__sub-menu > :nth-child(2) > .ef-nav__link').click();
         cy.get('.fat-footer__wrapper').find('.fat-footer__button').click();
-        cy.get('#FirstName').type('I am typing the first name');
+
+        cy.get('.block-text__title').should('have.text', 'Contact us');
+
+        cy.get('#FirstName').as('Fname');
+        cy.get('@Fname').type('I am typing the first name');
 
         
     })
