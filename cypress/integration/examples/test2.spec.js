@@ -1,14 +1,14 @@
 /// <reference types="Cypress" />
 
-describe('how to test another webpage', function () {
+describe('how to test another webpage',  () => {
 
-    it('shows from landing to checkout page', function () {
+    it('shows from landing to checkout page', () => {
 
 
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
         cy.get('.search-keyword').type('ca')
         cy.wait(2000)
-        //selenium get hit url in browser, cypress get acts like findElement of selenium
+    
 
         //Parent child chaining
         cy.get('.products').as('productLocator')
